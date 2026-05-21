@@ -36,4 +36,13 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# Device Info
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_PLATFORM := mt6765
+PRODUCT_BOARD := m8_4g
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 33
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
