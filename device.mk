@@ -13,28 +13,22 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
-    bootctrl.mt6765
-
-# Boot control HAL
+# Boot control HAL e Update Engine
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
     bootctrl.mt6765 \
     libgptutils \
-    libcutils
-
-PRODUCT_PACKAGES += \
+    libcutils \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Utilitários MTK para armazenamento
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils
 
 # Device Info
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -45,4 +39,4 @@ PRODUCT_BOARD := m8_4g
 PRODUCT_TARGET_VNDK_VERSION := 33
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 33
