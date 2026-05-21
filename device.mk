@@ -12,6 +12,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+PRODUCT_VIRTUAL_AB_OTA := true
+PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.enabled=true
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    e2fsck.vendor_ramdisk \
 
 # Boot control HAL e Update Engine
 PRODUCT_PACKAGES += \
