@@ -21,10 +21,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.mt6765
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
     bootctrl.mt6765 \
     libgptutils \
-    libz \
     libcutils
 
 PRODUCT_PACKAGES += \
@@ -33,3 +35,5 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
