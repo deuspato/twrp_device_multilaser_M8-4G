@@ -43,19 +43,13 @@ PRODUCT_TARGET_VNDK_VERSION := 33
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
 
- # VIRTUAL A/B
-ENABLE_VIRTUAL_AB := true
- 
 # A/B
 AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS += \
-    init_boot \
-    vendor \
-    vendor_boot \
-    system \
     boot \
-    dtbo \
+    system \
+    system_ext \
+    vendor \
+    product \
     vbmeta_system \
-    vbmeta_vendor \
-    product
+    vbmeta_vendor
