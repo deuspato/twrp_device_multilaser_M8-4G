@@ -29,15 +29,33 @@ PRODUCT_PACKAGES += \
 
 # Utilitários MTK para armazenamento
 PRODUCT_PACKAGES += \
-    mtk_plpath_utils
+    mtk_plpath_utils \
+    mtk_plpath_utils.recovery
 
 # Device Info
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PLATFORM := mt6765
-PRODUCT_BOARD := m8_4g
+PRODUCT_BOARD := M8_4G
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 33
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
+
+ # VIRTUAL A/B
+ENABLE_VIRTUAL_AB := true
+ 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    init_boot \
+    vendor \
+    vendor_boot \
+    system \
+    boot \
+    dtbo \
+    vbmeta_system \
+    vbmeta_vendor \
+    product
