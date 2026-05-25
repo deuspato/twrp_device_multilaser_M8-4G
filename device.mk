@@ -53,3 +53,5 @@ AB_OTA_PARTITIONS += \
     product \
     vbmeta_system \
     vbmeta_vendor
+# Test
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dtb.img:$(PRODUCT_OUT)/dtb.img
